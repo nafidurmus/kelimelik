@@ -1,0 +1,119 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+
+
+@import url(//fonts.googleapis.com/css?family=Lato:400,900);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+
+
+.info-card {
+    float: left;
+	margin: 10px;
+	-webkit-perspective: 600px;
+}
+
+.front, .back {
+	background: linear-gradient(to right, #50c9c3, #96deda);
+	border-radius: 10px;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	border: 1px solid black;
+	
+}
+
+.front {
+	overflow: hidden;
+	width: 205px;
+	height: 222px;
+	position: absolute;
+	z-index: 1;
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
+
+.back {
+	padding: 20px;
+	padding-top: 0px;
+	width: 205px;
+	height: 222px;
+	-webkit-transform: rotateY(-180deg);
+}
+
+.info-card:hover .back {
+	-webkit-transform: rotateY(0);
+}
+
+.info-card:hover .front {
+	-webkit-transform: rotateY(180deg);
+}
+
+.card-image {
+width: 100%;
+height: 100%;
+}
+
+
+/* Social buttons */
+.social {
+	list-style: none;
+	padding: 0px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.social a {
+		position: relative;
+		display: inline-block;
+		min-width: 40px;
+		padding: 10px 0px;
+		margin: 0px 5px;
+		overflow: hidden;
+		text-align: center;
+		background-color: rgb(215, 215, 215);
+		border-radius: 40px;
+	}
+
+
+a.social-icon {
+	text-decoration: none !important;
+	box-shadow: 0px 0px 1px rgb(51, 51, 51);
+	box-shadow: 0px 0px 1px rgba(51, 51, 51, 0.7);
+	}
+a.social-icon:hover {
+	color: rgb(255, 255, 255) !important;
+}
+a.facebook {
+	color: rgb(59, 90, 154) !important;
+}
+a.facebook:hover {		
+	background-color: rgb(59, 90, 154) !important;
+}
+a.twitter {
+	color: rgb(45, 168, 225) !important;
+}
+a.twitter:hover {
+	background-color: rgb(45, 168, 225) !important;
+}
+a.github {
+	color: rgb(51, 51, 51) !important;
+}
+a.github:hover {
+	background-color: rgb(51, 51, 51) !important;
+}
